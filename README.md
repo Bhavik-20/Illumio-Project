@@ -2,7 +2,7 @@
 
 ## Environment info
 
-1. Python version - 3.10.0
+1. Python version - `3.10.0`
 2. Modules used 
     - `csv`
     - `defaultdict` from `collections` module
@@ -12,9 +12,10 @@
 1. Navigate to home directory of the project.
 2. Open terminal and run the following command `python parse_flow_log_data.py flow_log_sample.txt lookup_table_sample.txt output_test.txt`. 
 3. You can run the program with different input files by changing the arguments passed above. The arguments are as follows
-    i. 'flow_log', type=str, help='Input flow_log file name with extension'
-    ii. 'lookup_table', type=str, help='Input lookup_table file name with extension'
-    iii. 'output_file_name', type=str, help='Output file name with extension'
+
+    - 'flow_log', type=str, help='Input flow_log file name with extension'
+    - 'lookup_table', type=str, help='Input lookup_table file name with extension'
+    - 'output_file_name', type=str, help='Output file name with extension'
 
 ## Tests and Analysis
 
@@ -23,13 +24,13 @@
 | flow_log size | lookup_table size | output_file |
 |---------------|-------------------|-------------|
 | 4 KB          | 11 mappings       |[output_Sample.txt](https://github.com/Bhavik-20/Illumio-Project/blob/main/outputDir/output_Sample.txt) |
-| 10 MB         | 10000 mappings    |[output_Both.txt](https://github.com/Bhavik-20/Illumio-Project/blob/main/outputDir/output_Both.txt) |
+| 10 MB         | 10000 mappings    |[output_Large-Both.txt](https://github.com/Bhavik-20/Illumio-Project/blob/main/outputDir/output_Both.txt) |
 | 4 KB          | 10000 mappings    |[output_Large-Lookup.txt](https://github.com/Bhavik-20/Illumio-Project/blob/main/outputDir/output_Large-Lookup.txt) |
 | 10 MB         | 11 mappings       |[output_Large-FlowLog.txt](https://github.com/Bhavik-20/Illumio-Project/blob/main/outputDir/output_Large-FlowLog.txt) |
 
 ### Analysis
 
-- ![Worst-case analysis](Readme-references/image.png)
+![Worst-case analysis](Readme-references/image.png)
 
 - Overall, in the worst-case scenario where `flow_log` file size is `10 MB` and `lookup_table` file has `10000 mappings`, the program ran in less than `0.2 seconds`.
 
@@ -41,7 +42,7 @@
 
 2. Only version 2 logs are considered [{Line 32 in parse_flow_log_data.py}](https://github.com/Bhavik-20/Illumio-Project/blob/main/parse_flow_log_data.py#L32).
 
-3. A record from `flow_log` is considered in the "Port/Protocol Combination Counts" only if the corresponding `(dstport, protocol)` exists in the `lookup_table`  [{Line 45 in parse_flow_log_data.py}](https://github.com/Bhavik-20/Illumio-Project/blob/main/parse_flow_log_data.py#L45).
+3. A record from `flow_log` is considered in the "Port/Protocol Combination Counts" only if the corresponding `(dstport, protocol)` exists in the `lookup_table`  [{Line 46 in parse_flow_log_data.py}](https://github.com/Bhavik-20/Illumio-Project/blob/main/parse_flow_log_data.py#L46).
     - For example, the record 
     `2,123456789012,eni-9h8g7f6e,172.16.0.100,203.0.113.102,110,49156,6,12,9000,1620140761,1620140821,ACCEPT,OK`, if the `(49156, 6)` key is not present in the `lookup_table`,
     this record will be ignored for "Port/Protocol Combination Counts" in the output file.
@@ -61,4 +62,4 @@
 
 ### Output Files
 
-Please refer to [this](README.md#tested-the-program-with-different-input-file-sizes) section of the README file to learn about the different output files.
+Please refer to [Tested the program with different input file sizes](README.md#tested-the-program-with-different-input-file-sizes) section of this README file to learn about the different output files.
