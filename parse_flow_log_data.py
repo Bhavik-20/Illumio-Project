@@ -63,11 +63,11 @@ def write_output(tag_counts, port_protocol_counts, output_file_path):
 # Main function to execute the script
 def main():
     protocol_mapping_file = 'inputDir/protocol_mapping.csv'
-    lookup_table_file = 'inputDir/lookup_table_sample.txt'
-    flow_log_file = 'inputDir/flow_log_sample.txt'
+    # lookup_table_file = 'inputDir/lookup_table_sample.txt'
+    # flow_log_file = 'inputDir/flow_log_sample.txt'
 
-    # lookup_table_file = 'inputDir/lookup_table_maxMappings.txt'
-    # flow_log_file = 'inputDir/flow_log_size-10mb.txt'
+    lookup_table_file = 'inputDir/lookup_table_maxMappings.txt'
+    flow_log_file = 'inputDir/flow_log_size-10mb.txt'
 
     output_file = 'outputDir/output_Sample.txt'
 
