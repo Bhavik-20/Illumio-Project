@@ -24,7 +24,7 @@
 | flow_log size | lookup_table size | output_file |
 |---------------|-------------------|-------------|
 | 4 KB          | 11 mappings       |[output_Sample.txt](https://github.com/Bhavik-20/Illumio-Project/blob/main/outputDir/output_Sample.txt) |
-| 10 MB         | 10000 mappings    |[output_Large-Both.txt](https://github.com/Bhavik-20/Illumio-Project/blob/main/outputDir/output_Both.txt) |
+| 10 MB         | 10000 mappings    |[output_Large-Both.txt](https://github.com/Bhavik-20/Illumio-Project/blob/main/outputDir/output_Large-Both.txt) |
 | 4 KB          | 10000 mappings    |[output_Large-Lookup.txt](https://github.com/Bhavik-20/Illumio-Project/blob/main/outputDir/output_Large-Lookup.txt) |
 | 10 MB         | 11 mappings       |[output_Large-FlowLog.txt](https://github.com/Bhavik-20/Illumio-Project/blob/main/outputDir/output_Large-FlowLog.txt) |
 
