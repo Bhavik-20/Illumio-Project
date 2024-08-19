@@ -16,6 +16,7 @@
     - 'flow_log', type=str, help='Input flow_log file name with extension'
     - 'lookup_table', type=str, help='Input lookup_table file name with extension'
     - 'output_file_name', type=str, help='Output file name with extension'
+    - ###### Note that the files provided to the program should be in the inputDir/. The output of the program would be stored in outputDir/.
 
 ## Tests and Analysis
 
