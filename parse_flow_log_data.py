@@ -1,5 +1,6 @@
 import csv
 from collections import defaultdict
+import argparse
 
 # Function to parse the protocol mapping file into a dictionary
 def parse_protocol_mapping(file_path):
@@ -62,14 +63,20 @@ def write_output(tag_counts, port_protocol_counts, output_file_path):
 
 # Main function to execute the script
 def main():
+    parser = argparse.ArgumentParser(description="A description of your program")
+
+    parser.add_argument('flow_log', type=str, help='Input flow_log file name with extension')
+    parser.add_argument('lookup_table', type=str, help='Input lookup_table file name with extension')
+    parser.add_argument('output_file_name', type=str, help='Output file name with extension')
+    args = parser.parse_args()
+
     protocol_mapping_file = 'inputDir/protocol_mapping.csv'
-    # lookup_table_file = 'inputDir/lookup_table_sample.txt'
-    # flow_log_file = 'inputDir/flow_log_sample.txt'
 
-    lookup_table_file = 'inputDir/lookup_table_maxMappings.txt'
-    flow_log_file = 'inputDir/flow_log_size-10mb.txt'
+    # Sample dataset
+    flow_log_file = f"inputDir/{args.flow_log}"
+    lookup_table_file = f"inputDir/{args.lookup_table}"
+    output_file = f"outputDir/{args.output_file_name}"
 
-    output_file = 'outputDir/output_Sample.txt'
 
     protocol_mapping = parse_protocol_mapping(protocol_mapping_file)
     lookup_table = parse_lookup_table(lookup_table_file)

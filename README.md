@@ -10,7 +10,11 @@
 ## How to compile/run the program
 
 1. Navigate to home directory of the project.
-2. Open terminal and run the following command `python parse_flow_log_data.py`. 
+2. Open terminal and run the following command `python parse_flow_log_data.py flow_log_sample.txt lookup_table_sample.txt output_test.txt`. 
+3. You can run the program with different input files by changing the arguments passed above. The arguments are as follows
+    i. 'flow_log', type=str, help='Input flow_log file name with extension'
+    ii. 'lookup_table', type=str, help='Input lookup_table file name with extension'
+    iii. 'output_file_name', type=str, help='Output file name with extension'
 
 ## Tests and Analysis
 
@@ -52,9 +56,9 @@
 2. [inputDir/flow_log_sample.txt](https://github.com/Bhavik-20/Illumio-Project/blob/main/inputDir/flow_log_sample.txt) - a sample flow_log data file in text format which is provided to the program.
 3. [inputDir/flow_log_size-10mb.txt](https://github.com/Bhavik-20/Illumio-Project/blob/main/inputDir/flow_log_size-10mb.txt) - a sample flow_log data file which is 10 MB in size. Used to test program in worst-case scenario.
 4. [inputDir/lookup_table_maxMappings.txt](https://github.com/Bhavik-20/Illumio-Project/blob/main/inputDir/lookup_table_maxMappings.txt) - a sample lookup_table file which has 10000 mappings. Used to test program in worst-case scenario.
-5. [inputDir/lookup_table_sample.txt](https://github.com/Bhavik-20/Illumio-Project/blob/main/inputDir/lookup_table_maxMappings.txt) - a sample lookup_table file which is provided to the program.
-6. [inputDir/protocol_mapping.csv](https://github.com/Bhavik-20/Illumio-Project/blob/main/inputDir/lookup_table_maxMappings.txt) - a lookup file for mapping protocol (int) to protocol name. Referenced from aws documentation`https://docs.aws.amazon.com/vpc/latest/userguide/flow-log-records.html` -> `http://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml`.
+5. [inputDir/lookup_table_sample.txt](https://github.com/Bhavik-20/Illumio-Project/blob/main/inputDir/lookup_table_sample.txt) - a sample lookup_table file which is provided to the program.
+6. [inputDir/protocol_mapping.csv](https://github.com/Bhavik-20/Illumio-Project/blob/main/inputDir/protocol_mapping.csv) - a lookup file for mapping protocol (int) to protocol name. Referenced from aws documentation`https://docs.aws.amazon.com/vpc/latest/userguide/flow-log-records.html` -> `http://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml`.
 
 ### Output Files
 
-Please refer to [this](https://github.com/Bhavik-20/Illumio-Project/blob/main/README.md#L19) section of the README file to learn about the different output files.
+Please refer to [this](README.md#tested-the-program-with-different-input-file-sizes) section of the README file to learn about the different output files.
